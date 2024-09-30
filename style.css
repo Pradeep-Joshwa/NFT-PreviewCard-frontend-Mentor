@@ -1,0 +1,150 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+
+:root {
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: outfit, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--mainBG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#eq{
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+   
+}
+
+
+.card {
+    width: 350px;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: var(--cardBG);
+    color: white;
+    padding: 1.3em ;
+   
+
+}
+h2{
+    margin: 1em auto;
+    letter-spacing: 1px;
+}
+p{
+    color: var(--Softblue);
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-bottom: 1em;
+}
+#rating{
+    color: var(--Cyan);
+    font-weight: 900;
+}
+.details{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+
+  
+}
+
+.details::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--line);
+    position: absolute;
+    bottom: -1.3em;
+
+}
+span{
+    color: var(--Softblue);
+}
+.details span img{
+    vertical-align:text-bottom;
+    padding-right: 5px ;
+}
+
+
+
+.profile img{
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.profile{
+    margin-top: 1em;
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-weight: 300;
+}
+
+#profile-p{
+    margin:auto
+}
+#profile-p span{
+    color: white;
+    
+}
+
+h2:hover, #profile-p span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.img-container{
+    position: relative;
+    
+  
+}
+.img-container .eye-icon{
+    position: absolute;
+    background-color: hsla(178, 100%, 50%, 0.5); 
+
+  
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.eye-icon img{
+ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+
+  transform: translate(-50%,-50%);
+}
+
+.img-container:hover .eye-icon
+{
+    opacity:1;
+
+}
+
